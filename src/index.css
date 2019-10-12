@@ -44,3 +44,44 @@ html, body{
     color: #0000;
     font-weight: 600;
 }
+
+/* Modal para itens no carrginho */
+
+.modal-items{
+    position: absolute;
+    right: 3%;
+    width: 25%;
+    height: auto;
+    background-color: rgb(241, 241, 241) !important;
+    padding: 1%;
+    height: 60%;
+    overflow-y: scroll;
+    padding: 22px;
+}
+
+.modal-items ul{
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-items li{
+    margin-bottom: 7%;
+    padding-bottom: 3%;
+    border-bottom: 1px solid #EAEBEA;
+}
+
+.modal-items .title{
+    font-size: 14px;
+}
+
+.description{
+    font-size: 14px;
+    padding: 0;
+}
+
+.strong{
+    font-weight: bold;
+}
