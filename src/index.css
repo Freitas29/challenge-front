@@ -51,12 +51,9 @@ html, body{
     position: absolute;
     right: 3%;
     width: 25%;
-    height: auto;
-    background-color: rgb(241, 241, 241) !important;
     padding: 1%;
+    background-color: #e6e6e6;
     height: 60%;
-    overflow-y: scroll;
-    padding: 22px;
 }
 
 .modal-items ul{
@@ -65,6 +62,8 @@ html, body{
     width: 100%;
     padding: 0;
     margin: 0;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .modal-items li{
@@ -84,4 +83,33 @@ html, body{
 
 .strong{
     font-weight: bold;
+}
+
+/* Price into modal items */
+
+.total-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(241, 241, 241) !important;
+    width: 100%;
+    min-height: 70px;
+}
+
+.finish-shopping{
+    width: 100%;
+    min-height: 50px;
+    background-color: red; 
+}
+
+.finish-shopping button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #5cbe26;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
 }
