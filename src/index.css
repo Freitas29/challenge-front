@@ -48,6 +48,7 @@ html, body{
 /* Modal para itens no carrginho */
 
 .modal-items{
+    display: none;
     position: absolute;
     right: 3%;
     width: 23%;
