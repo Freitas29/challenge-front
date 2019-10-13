@@ -58,17 +58,6 @@ html, body{
     padding: 2% 0%;
 }
 
-@media only screen and (max-width: 600px) {
-    .modal-items{
-        width: 50%;
-        right: 6%;
-    }
-
-    .modal-items ul{
-        padding-left: 40px;
-    }
-}
-
 .modal-items ul{
     text-decoration: none;
     list-style: none;
@@ -89,7 +78,8 @@ html, body{
 .modal-items .title{
     font-size: 14px;
     margin-top: 4%;
-    color: #535555;
+    color: #585858;
+    font-weight: bold;
 }
 
 .description{
@@ -135,4 +125,66 @@ html, body{
     font-size: 18px;
     text-transform: uppercase;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-items{
+        width: 50%;
+        right: 6%;
+    }
+
+    .modal-items ul{
+        padding: 10px;
+    }
+
+    .total-price{
+        flex-wrap: wrap;
+        padding: 1% 10%;
+        text-align: center;
+    }
+
+    .finish-shopping button{
+        font-size: 14px;
+    }
+
+    .description{
+        font-size: 11px;
+    }
+
+    .description-money{
+        font-size: 11px;
+    }
+
+    .navbar-brand{
+        width: 50%;
+    }
+
+    .navbar{
+        height: 15%
+    }
+
+    .actions{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-item .icons{
+        width: 24px;
+        height: 24px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .actions{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .nav-item .icons{
+        width: 24px;
+        height: 24px;
+    }
 }
