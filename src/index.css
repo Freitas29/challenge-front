@@ -134,6 +134,25 @@ html, body{
     text-align: center;
 }
 
+.seta-cima:before {
+    position: absolute;
+    z-index: 1;
+    top: -3%;
+    left: 82%;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 0; 
+    height: 0; 
+  
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #f1f1f1;
+  }
+  
+
+
 @media only screen and (max-width: 600px) {
     .modal-items{
         width: 50%;
@@ -191,6 +210,10 @@ html, body{
         height: 24px;
     }
 
+    .seta-cima:before {
+        left: 13%;
+    }
+
 }
 
 
@@ -215,4 +238,9 @@ html, body{
         width: 24px;
         height: 24px;
     }
+
+    .seta-cima:before {
+        left: 70%;
+    }
+    
 }
