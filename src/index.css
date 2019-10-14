@@ -292,6 +292,13 @@ html, body{
     }
 }
 
+@media only screen and (min-width: 2560px) {
+    .seta-cima:before {
+        left: 90%;
+        top: -2%;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
