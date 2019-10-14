@@ -11,27 +11,29 @@ const cardItem = document.getElementById('card-item')
 
 const buildListItems = data => {
     let row = buildRow()
-    let image = buildImage(data.cart.item[0].image)
+    data.cart.item.map(item => {
+        let image = buildImage(item.image)
 
-    // Constro a imagem
-    let divRow = cardItem.appendChild(row)
-    let imageDiv = divRow.appendChild(buildColums("col-lg-4", false))
-    imageDiv.appendChild(image)
+        // Constro a imagem
+        let divRow = cardItem.appendChild(row)
+        let imageDiv = divRow.appendChild(buildColums("col-lg-4", false))
+        imageDiv.appendChild(image)
 
-    //Constroi o titulo
-    let main = divRow.appendChild(buildColums("col-lg-8"))
-    let mainTitle = main.appendChild(buildColums("col-lg-12"))
-    mainTitle.appendChild(buildTitle(data.cart.item[0].name))
+        //Constroi o titulo
+        let main = divRow.appendChild(buildColums("col-lg-8"))
+        let mainTitle = main.appendChild(buildColums("col-lg-12"))
+        mainTitle.appendChild(buildTitle(item.name))
 
-    let mainDescription =  main.appendChild(buildColums("col-lg-12"))
-    let rowDescription = mainDescription.appendChild(buildRow("align-items-center"))
+        let mainDescription =  main.appendChild(buildColums("col-lg-12"))
+        let rowDescription = mainDescription.appendChild(buildRow("align-items-center"))
 
-    //Constroi a qtd
-    let colDescription = rowDescription.appendChild(buildColums("col-lg-4"))
-    colDescription.appendChild(buildLabelQtd(data.cart.item[0].quantity))
+        //Constroi a qtd
+        let colDescription = rowDescription.appendChild(buildColums("col-lg-4"))
+        colDescription.appendChild(buildLabelQtd(item.quantity))
 
-    let colValue = rowDescription.appendChild(buildColums("col-lg-6"))
-    colValue.appendChild(buildLabelMoney(data.cart.item[0].bestPriceFormated))
+        let colValue = rowDescription.appendChild(buildColums("col-lg-6"))
+        colValue.appendChild(buildLabelMoney(item.bestPriceFormated))
+})
 }
 
 document.addEventListener("DOMContentLoaded", () => {
