@@ -80,6 +80,9 @@ html, body{
     margin-top: 4%;
     color: #585858;
     font-weight: bold;
+    overflow: hidden;
+    max-width: 16ch;
+    max-height: 4ch;
 }
 
 .description{
