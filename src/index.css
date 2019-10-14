@@ -137,6 +137,17 @@ html, body{
         padding: 10px;
     }
 
+    .navbar-collapse{
+        position: absolute;
+        top: 100%;
+        background-color: #ddd;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        margin: 0;    
+    }
+
+
     .total-price{
         flex-wrap: wrap;
         padding: 1% 10%;
@@ -182,6 +193,16 @@ html, body{
         flex-direction: row;
     }
 
+
+    .navbar-collapse{
+        position: absolute;
+        top: 100%;
+        background-color: #ddd;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        margin: 0;    
+    }
 
     .nav-item .icons{
         width: 24px;
