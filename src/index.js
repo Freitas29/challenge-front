@@ -13,18 +13,25 @@ const buildListItems = data => {
     let row = buildRow()
     let image = buildImage(data.cart.item[0].image)
 
+    // Constro a imagem
     let divRow = cardItem.appendChild(row)
     let imageDiv = divRow.appendChild(buildColums("col-lg-4", false))
     imageDiv.appendChild(image)
 
+    //Constroi o titulo
     let main = divRow.appendChild(buildColums("col-lg-8"))
     let mainTitle = main.appendChild(buildColums("col-lg-12"))
     mainTitle.appendChild(buildTitle(data.cart.item[0].name))
 
     let mainDescription =  main.appendChild(buildColums("col-lg-12"))
     let rowDescription = mainDescription.appendChild(buildRow("align-items-center"))
+
+    //Constroi a qtd
     let colDescription = rowDescription.appendChild(buildColums("col-lg-4"))
     colDescription.appendChild(buildLabelQtd(data.cart.item[0].quantity))
+
+    let colValue = rowDescription.appendChild(buildColums("col-lg-6"))
+    colValue.appendChild(buildLabelMoney(data.cart.item[0].bestPriceFormated))
 }
 
 document.addEventListener("DOMContentLoaded", () => {
