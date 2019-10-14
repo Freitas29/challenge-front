@@ -36,3 +36,8 @@ Então mãos a obra e bom challenge ;)
 - Boa descrição das funcionalidades do desafio
 - Fidelidade ao design proposto
 - Adaptação mobile
+
+## Como executar
+
+- npm i
+- Abra o arquivo **index.html**
