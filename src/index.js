@@ -9,11 +9,13 @@ document.getElementById('card-button').addEventListener('click', () => {
 
 const cardItem = document.getElementById('card-item')
 
+var totalValue = 0
+
 const buildListItems = data => {
     let row = buildRow()
     data.cart.item.map(item => {
         let image = buildImage(item.image)
-
+        totalValue = totalValue + item.bestPrice
         // Constro a imagem
         let divRow = cardItem.appendChild(row)
         let imageDiv = divRow.appendChild(buildColums("col-lg-4", false))
@@ -33,7 +35,8 @@ const buildListItems = data => {
 
         let colValue = rowDescription.appendChild(buildColums("col-lg-6"))
         colValue.appendChild(buildLabelMoney(item.bestPriceFormated))
-})
+    })
+    document.getElementById("total-value").innerText = numberToReal(totalValue)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -111,4 +114,20 @@ const buildLabelQtd = value => {
     element.classList.add("strong")
     element.innerText = `Qtd: ${value}`
     return element
+}
+
+
+function numberToReal(numero) {
+    numberFormated = []
+    
+    var firstPart = numero.toString();
+    firstPart = firstPart.substring(0,firstPart.length-2)
+    numberFormated.push(firstPart)
+
+    var seccondPart = numero.toString()
+    seccondPart = seccondPart.substring(seccondPart.length,seccondPart.length-2)
+    numberFormated.push(seccondPart)
+    
+    numberFormated[0] = "R$ " + numberFormated[0].split(/(?=(?:...)*$)/).join('.');
+    return numberFormated.join(',');
 }
