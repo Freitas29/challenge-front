@@ -98,6 +98,10 @@ html, body{
     font-weight: bold;
 }
 
+.actions li{
+    margin: 0px 25px;
+}
+
 /* Price into modal items */
 
 .total-price{
