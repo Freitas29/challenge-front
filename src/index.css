@@ -152,7 +152,7 @@ html, body{
   }
   
 
-
+   
 @media only screen and (max-width: 600px) {
     .modal-items{
         width: 50%;
@@ -216,7 +216,6 @@ html, body{
 
 }
 
-
 @media only screen and (max-width: 1024px) {
     .actions{
         display: flex;
@@ -240,7 +239,55 @@ html, body{
     }
 
     .seta-cima:before {
-        left: 70%;
+        top: -1.5%;
+        left: 75%;
     }
     
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .seta-cima:before {
+        left: 66%;
+        top: -2%;
+    }
+}
+
+
+@media only screen and (max-width: 411px) {
+    .seta-cima:before {
+        left: 13%;
+        top: -2%;
+    }
+  }
+@media only screen and (max-width: 411px) {
+    .seta-cima:before {
+        left: 1%;
+        top: -2%;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .seta-cima:before {
+        left: 8%;
+        top: -2%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .seta-cima:before {
+        left: 1%;
+        top: -2%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .seta-cima:before {
+        left: 11%;
+        top: -2%;
+    }
 }
